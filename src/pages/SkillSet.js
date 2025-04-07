@@ -3,7 +3,6 @@ import "../App.css"; // Make sure the CSS file is included
 import { Link } from "react-router-dom";
 
 import logo from "../assets/styles/vm_logo_modern.svg"; // Import logo
-import avatarImage from "../assets/styles/cartoon.png"; // Import the avatar image (adjust the path accordingly)
 
 const SkillSet = () => {
   return (

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../App.css";  // Make sure the CSS file is included
 import { Link } from "react-router-dom";
-import resume from "../assets/styles/resume.pdf"; // Import your resume PDF
 import logo from "../assets/styles/vm_logo_modern.svg"; // Import logo
 
 const AboutMe = () => {
