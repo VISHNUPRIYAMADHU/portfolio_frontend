@@ -1,0 +1,182 @@
+/* src/Chatbot.css */
+
+/* Ensure the chatbot window is fixed at the bottom-right */
+.chatbot-window {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px); /* Adds background blur effect */
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 13px;
+  letter-spacing: -1px;
+
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Chat header styling */
+.chatbot-header {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Close button styling */
+.close-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 10px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #ff0000;
+}
+
+/* Container for chat messages */
+.chatbox-container {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+/* Styling for individual chat messages */
+.user p {
+  background-color: #38d16e;
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
+  text-align: right;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.bot p {
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 8px;
+  border-radius: 10px;
+  text-align: left;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+/* Styling for input area */
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+input {
+  width: calc(100% - 90px);
+  padding: 1px 1px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  font-size: 8px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #40cb47;
+}
+
+button {
+  padding: 12px 15px;
+  margin-left: 10px;
+  background-color: #1eca5a;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  width: 70px;
+}
+
+button:hover {
+  background-color: #2d8b30;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Styling for the options section */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: left;
+  padding: 10px 0;
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap; /* Prevents text from breaking */
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  background: #f0f0f0;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.option-label.selected {
+  background: #38d16e;
+  color: white;
+  transform: scale(1.05);
+}
+
+.option-label:hover {
+  background: #38d16e;
+  color: white;
+  transform: scale(1.05);
+}
+
+
+.option-label input[type="checkbox"]:checked + span {
+  background-color: #e0ffe0; /* Light green background for selected options */
+  border: 2px solid #4caf50; /* Green border for selected options */
+  padding: 2px;
+  border-radius: 4px;
+}
+
+/* Others button styling */
+.others-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  min-width: 180px;
+}
+
+.others-button:hover {
+  background: linear-gradient(135deg, #ff5722, #e64a19);
+  transform: scale(1.05);
+}

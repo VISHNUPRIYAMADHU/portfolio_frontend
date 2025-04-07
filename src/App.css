@@ -1,0 +1,685 @@
+/* Global Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: url('https://img.freepik.com/premium-photo/soothing-forest-tranquility-dark-green-colors-gradient-light-textured-matte-2_1030736-27440.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  position: relative;
+  display: flex; /* Added flexbox for layout */
+  justify-content: space-between; /* Distribute space between text and photo */
+  align-items: center; /* Center the text and photo vertically */
+}
+
+.text-container {
+  max-width: 60%; /* Allow text to take up 60% of the space */
+}
+
+.photo-container {
+  max-width: 35%; /* Allow photo to take up 35% of the space */
+}
+
+.my-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 0; /* Remove border radius */
+  /* Removed box-shadow */
+}
+
+/* Styling for Intro Heading */
+.intro-heading {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: left;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+  left: 0;
+  opacity: 0;
+  letter-spacing: -4px;
+  animation: fadeInLeft 2s forwards;
+}
+
+/* Styling for Name Heading */
+.name-heading {
+  font-family: 'Georgia', serif;
+  font-size: 4rem;
+  color: #ffffff;
+  text-align: left;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+  left: 0;
+  letter-spacing: -4px;
+  opacity: 0;
+  animation: slideInUp 2s forwards;
+}
+@media (max-width: 768px) {
+  .name-heading {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+    text-align: center;
+  }
+
+  .intro-heading, .role-heading {
+    text-align: center;
+  }
+
+  .photo-container {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .name-heading {
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+}
+
+
+/* Styling for Role Heading */
+.role-heading {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-weight: bold;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #ffffff;
+  text-align: left;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 0;
+  left: 0;
+  opacity: 0;
+  letter-spacing: 0px;
+  animation: fadeInRight 2s forwards;
+}
+@media (max-width: 768px) {
+  .intro-heading {
+    font-size: 1.8rem;
+    letter-spacing: -2px;
+    text-align: center;
+  }
+
+  .name-heading {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+    text-align: center;
+  }
+
+  .role-heading {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .photo-container {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-heading {
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+  }
+
+  .name-heading {
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+
+  .role-heading {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Keyframes for Animations */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+  
+/* Button Styles */
+/* Button Styles */
+/* Button Styling */
+a.btn {
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a.btn-primary {
+  background-color: #000808;
+  color: white;
+}
+
+a.btn-primary:hover {
+  background-color: #21dd47;
+  transform: translateY(-2px);
+}
+
+a.btn-primary i {
+  margin-right: 8px; /* Space between the icon and text */
+}
+
+/* Styling for Resume Button Position */
+a.btn-primary {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Responsive Styling for Button */
+@media (max-width: 768px) {
+  a.btn {
+    font-size: 1rem; /* Slightly smaller font on tablets */
+    padding: 10px 20px; /* Reduced padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  a.btn {
+    font-size: 0.9rem; /* Smaller font for very small screens */
+    padding: 8px 16px; /* Even smaller padding */
+    width: 100%; /* Make the button take up full width on mobile */
+    text-align: center; /* Center align the button text */
+  }
+}
+
+
+
+  /* Navbar Styling */
+ /* Navbar Styling */
+
+
+/* Font for the navbar links */
+.navbar-nav .nav-link {
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: #38b562 !important;
+  font-size: 1.1rem;
+  margin-right: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+/* Navbar Styling */
+.navbar {
+  padding: 10px 0;
+  background-color: transparent; /* Set background color to transparent */
+  box-shadow: none; /* Optional: Remove any box-shadow for a clean look */
+}
+
+.navbar-brand img {
+  width: 200px;
+  height: 100px;
+}
+
+/* Navbar Links */
+.navbar-links .navbar-nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* Navbar Links Styling */
+.navbar-nav .nav-item .nav-link {
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar-toggler-icon {
+  background-color: #5fe065; /* White color for the toggler icon */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #21dd47;
+}
+
+/* Mobile-Friendly Styling */
+@media (max-width: 768px) {
+  .navbar-nav .nav-item {
+    font-size: 1rem;  /* Reduce font size on medium devices */
+  }
+
+  /* Make navbar items smaller and stacked on smaller screens */
+  .navbar-links {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    padding: 5px 0;
+  }
+
+  .navbar-nav {
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further reduce font size for very small screens */
+  .navbar-nav .nav-item {
+    font-size: 0.9rem;
+  }
+
+  /* Navbar links centered and stacked */
+  .navbar-nav {
+    display: block;
+  }
+
+  .navbar-nav .nav-item {
+    padding: 10px 0;
+  }
+
+  /* Optionally, adjust the logo size */
+  .navbar-brand img {
+    width: 150px;
+    height: 80px;
+  }
+}
+
+
+
+
+
+
+
+/* Ensure proper container for the icons */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 2rem;
+
+}
+
+/* Styling for the Contact Page */
+.contact-container {
+  text-align: center;
+  margin: 50px auto;
+}
+
+/* Profile container for positioning */
+.profile-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-photo {
+  width: 250px;  /* Increased size of the photo */
+  height: 250px;
+  border-radius: 50%;
+  border: 3px solid #fff; /* Optional: Border around the image */
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Ensure the 'Contact Me' heading is not overlapped */
+h1 {
+  font-size: 3rem;
+  color: #e1c3c3;
+  margin-top: 50px;
+  z-index: 2; /* Ensure it's above other elements */
+  position: relative; /* Ensure positioning is correct */
+}
+h2 {
+  color: #e1c3c3;
+  font-family: "Lucida Console", "Courier New", monospace;
+  letter-spacing: -4px;
+  z-index: 2; /* Ensure it's above other elements */
+  position: relative; /* Ensure positioning is correct */
+}
+
+/* Flex container for social icons to be inline */
+.social-icons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px; /* Space between icons */
+  margin-bottom: 30px;
+}
+
+/* Styling for individual social icons */
+.social-icon {
+  font-size: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.social-icon.email {
+  background-color: #d44638;
+  color: #fff;
+}
+
+.social-icon.linkedin {
+  background-color: #0077b5;
+  color: #fff;
+}
+
+.social-icon.phone {
+  background-color: #34b7f1;
+  color: #fff;
+}
+
+/* Hover effect for social icons */
+.social-icon:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: scale(1.2);
+}
+
+
+
+/* Styling for the About Me Section */
+.about-me-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+/* Video Container */
+.video-container {
+  position: relative;
+  width: 40%;
+  max-width: 600px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Video Thumbnail */
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* Right side - Details */
+.details-container {
+  width: 54%;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(175, 25, 25, 0.1);
+}
+
+/* Additional styling for the content */
+.details-container h2 {
+  font-size: 1.8rem;
+  color: #93cd90;
+  margin-bottom: 10px;
+}
+
+.details-container ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.details-container li {
+  font-size: 1.2rem;
+  color: #bc9c9c;
+  margin-bottom: 8px;
+}
+
+/* Tab Container */
+.tab-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* Tab Buttons */
+.tab-button {
+  background-color: #80b68c;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 680px; 
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Active Tab */
+.tab-button.active {
+  background-color: #80b68c;
+  color: #333;
+  transform: scale(1.05);
+}
+
+/* Hover Effect */
+.tab-button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Tab Content */
+.tab-content {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tab Content Heading */
+.tab-content h3 {
+  font-size: 24px;
+  color: #8eb39d;
+  margin-bottom: 10px;
+}
+
+/* Tab Content Paragraph */
+.tab-content p {
+  font-size: 18px;
+  color: #b0ddcb;
+}
+
+
+/* Add styles for the vertical timeline */
+.timeline {
+  position: relative;
+  width: 100%; /* Full width of the screen */
+  margin: 0 auto;
+  padding: 20px 0; /* Add vertical padding for spacing */
+  background: transparent;  /* Ensure the timeline container is transparent */
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+  position: relative;
+  align-items: center; /* Vertically center the items */
+  width: 100%; /* Ensure each timeline item takes full width */
+}
+
+.timeline-date {
+  width: 150px;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+  flex-shrink: 0; /* Prevent shrinking of the date container */
+  position: relative;
+}
+
+.timeline-content {
+  margin-left: 20px; /* Reduced space between the date and content */
+  padding-left: 20px;
+  padding-right: 20px;
+  border-left: 4px solid #4caf50;
+  flex-grow: 1; /* Allow the content to grow and take up remaining space */
+  width: calc(100% - 170px); /* Ensure the content takes full width minus the date width */
+}
+
+.timeline-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.timeline h3 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.timeline h4 {
+  color: #b0ddcb;
+}
+
+/* Chatbot Floating Icon */
+.chatbot-icon {
+  position: absolute;
+  bottom: 20px;  /* Distance from bottom */
+  right: 20px;   /* Distance from right */
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  z-index: 1000; /* Ensures it appears on top */
+ 
+}
+
+
+
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.chatbot-icon img {
+  width: 122px;
+  height: 100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding-bottom: 5px;
+  transition: transform 0.2s ease-in-out;
+  animation: float 1s ease-in-out infinite;
+}
+
+.chatbot-icon img:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+.option-button {
+  padding: 10px 14px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  margin-bottom: 8px;
+  user-select: none;
+}
+
+.option-button:hover {
+  background-color: #f0f0f0;
+}
+
+.option-button.selected {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+  font-weight: bold;
+}
+.custom-input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}

@@ -1,0 +1,48 @@
+/* Navbar Styling */
+.navbar {
+  background: url('https://img.freepik.com/free-vector/abstract-background-gradient-modern-design_677411-3055.jpg');
+
+  }
+  
+  .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    color: #007bff !important;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #d1d1d1 !important;
+    font-size: 1.1rem;
+    margin-right: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #fff !important;
+    transform: translateY(-2px); /* Small lift effect on hover */
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #fff; /* White color for the toggler icon */
+  }
+  
+  @media (max-width: 991px) {
+    .navbar-nav {
+      text-align: center;
+    }
+  
+    .navbar-nav .nav-link {
+      margin-right: 0;
+      padding: 10px;
+    }
+  }
+  
