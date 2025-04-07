@@ -477,6 +477,33 @@ h2 {
   height: 100%;
 }
 
+.map-image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+  gap: 30px;
+  padding: 20px;
+}
+
+.map-frame {
+  flex: 1 1 500px;
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  border: 0;
+  border-radius: 10px;
+}
+
+.avatar-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+}
 
 
 /* Right side - Details */
