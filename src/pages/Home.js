@@ -4,7 +4,7 @@ import Chatbot from "./Chatbot";
 import chatIcon from "../assets/styles/chatbot.png"; 
 import logo from "../assets/styles/vm_logo_modern.svg"; 
 import myPhoto from "../assets/styles/mypic.png"; 
-import resume from "../assets/styles/resume.pdf"; 
+import resume from "../assets/styles/resume_python.pdf"; 
 
 const Home = () => {
   const [showChatbot, setShowChatbot] = useState(false);
