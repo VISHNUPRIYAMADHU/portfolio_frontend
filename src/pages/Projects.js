@@ -3,7 +3,7 @@ import "../App.css";  // Make sure the CSS file is included
 import { Link } from "react-router-dom";
 
 import logo from "../assets/styles/vm_logo_modern.svg"; // Import logo
-import resume from "../assets/styles/resume_python.pdf"; // Import your resume PDF
+import resume from "../assets/styles/resume_node.pdf"; // Import your resume PDF
 
 const Projects = () => {
   return (
